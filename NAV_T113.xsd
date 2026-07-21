@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:common="https://soap.api.nav.gov.hu/definitions/model/2.0/common/1.0"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/T113/1.1"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/T113/1.1">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <import namespace="https://soap.api.nav.gov.hu/definitions/model/2.0/common/1.0"
+           schemaLocation="common.xsd"/>
+   <element name="Doc_T113"
+            type="tns:Doc_T113_Type"
+            meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>Kérelem a csoportos áfaalanyiság választására és a képviselő személyében bekövetkezett változás bejelentésére</documentation>
+      </annotation>
+      <xs:unique name="uniqueFileId_Attachment_1">
+         <xs:selector xpath="Form_T113/Attachment_1"/>
+         <xs:field xpath="fileId"/>
+      </xs:unique>
+   </element>
+   <simpleType name="Enum_T113_0A0001C008A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="U"/>
+         <enumeration value="T"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0BXXXXC021A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="1"/>
+         <enumeration value="3"/>
+         <enumeration value="4"/>
+         <enumeration value="5"/>
+         <enumeration value="6"/>
+         <enumeration value="7"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0BXXXXC008A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0BXXXXC012A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0BXXXXC016A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0CXXXXC011A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0CXXXXC015A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_T113_0CXXXXC019A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="közvetlen"/>
+         <enumeration value="közvetett"/>
+         <enumeration value="meghatározó befolyás"/>
+         <enumeration value="az ügyvezetés egyezőségére tekintettel, illetve közeli hozzátartozók útján"/>
+      </restriction>
+   </simpleType>
+   <complexType name="Doc_T113_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_T113"
+                  type="tns:Form_T113_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>T113 részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Form_T113_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány T113 részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120001"
+                  type="tns:Block_T113_120001_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Azonosító adatok</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120006"
+                  type="tns:Block_T113_120006_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>A csoportos áfaalanyiság tagjainak adataihoz, nyilatkozataihoz, a csoporthoz való csatlakozáshoz, a csoportos adóalanyisághoz adott engedély visszavonásához</documentation>
+            </annotation>
+         </element>
+         <element name="Block_120009"
+                  type="tns:Block_T113_120009_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>A csoportos áfaalanyiságon kívül maradó adóalany adataihoz, nyilatkozataihoz, a csoportból való kiváláshoz</documentation>
+            </annotation>
+         </element>
+         <element name="Attachment_1"
+                  type="common:AttachmentType"
+                  minOccurs="0"
+                  maxOccurs="unbounded"
+                  meta:metaType="AttachmentMetaType">
+            <annotation>
+               <documentation>T113 csatolmány; File Extensions:PDF;ZIP;RAR;ARJ;ACE;GZIP;TAR;CAB;BMP;JPG;JPEG;GIF;TIF;PNG</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_T113_120001_Type">
+      <annotation>
+         <documentation>Azonosító adatok</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120010"
+                  type="tns:FieldGroup_T113_120010_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Csoportazonosító</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120012"
+                  type="tns:FieldGroup_T113_120012_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Benyújtás indoka</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120013"
+                  type="tns:FieldGroup_T113_120013_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Tagok által kijelölt csoportképviselő adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120014"
+                  type="tns:FieldGroup_T113_120014_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Csoporttagok által kijelölt új csoportképviselő adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120015"
+                  type="tns:FieldGroup_T113_120015_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Új csoportos áfa alanyiság kérelmezése</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120016"
+                  type="tns:FieldGroup_T113_120016_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adatlapot benyújtó ügyintéző neve és telefonszáma</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_T113_120006_Type">
+      <annotation>
+         <documentation>A csoportos áfaalanyiság tagjainak adataihoz, nyilatkozataihoz, a csoporthoz való csatlakozáshoz, a csoportos adóalanyisághoz adott engedély visszavonásához</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120043"
+                  type="tns:Chain_T113_120043_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Csoporttag adatai</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Block_T113_120009_Type">
+      <annotation>
+         <documentation>A csoportos áfaalanyiságon kívül maradó adóalany adataihoz, nyilatkozataihoz, a csoportból való kiváláshoz</documentation>
+      </annotation>
+      <all>
+         <element name="Chain_120057"
+                  type="tns:Chain_T113_120057_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Kívül maradó csoporttag adatai</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Chain_T113_120043_Type">
+      <annotation>
+         <documentation>Csoporttag adatai</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="9999">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120018"
+                           type="tns:FieldGroup_T113_120018_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Csoporttag adatai</documentation>
+                     </annotation>
+                  </element>
+                  <element name="FieldGroup_120020"
+                           type="tns:FieldGroup_T113_120020_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Csoportos áfa alanyisághoz kapcsolódó nyilatkozatok</documentation>
+                     </annotation>
+                  </element>
+                  <element name="FieldGroup_120017"
+                           type="tns:FieldGroup_T113_120017_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Működő csoporthoz új adóalanyként csatlakozom</documentation>
+                     </annotation>
+                  </element>
+                  <element name="Chain_120045"
+                           type="tns:Chain_T113_120045_Type"
+                           minOccurs="0"
+                           meta:metaType="ChainMetaType">
+                     <annotation>
+                        <documentation>Kapcsolt jogviszony</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+      <attribute name="sdgID" use="required" fixed="120042"/>
+   </complexType>
+   <complexType name="Chain_T113_120045_Type">
+      <annotation>
+         <documentation>Kapcsolt jogviszony</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="3">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120019"
+                           type="tns:FieldGroup_T113_120019_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Kapcsolt jogviszony</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Chain_T113_120057_Type">
+      <annotation>
+         <documentation>Kívül maradó csoporttag adatai</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="9999">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120059"
+                           type="tns:FieldGroup_T113_120059_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Kívül maradó csoporttag adatai</documentation>
+                     </annotation>
+                  </element>
+                  <element name="FieldGroup_120060"
+                           type="tns:FieldGroup_T113_120060_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>A kívül maradó tag nyilatkozatai</documentation>
+                     </annotation>
+                  </element>
+                  <element name="FieldGroup_120058"
+                           type="tns:FieldGroup_T113_120058_Type"
+                           minOccurs="0"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Működő csoporthoz kívül maradó új adóalanyként kapcsolódom</documentation>
+                     </annotation>
+                  </element>
+                  <element name="Chain_120061"
+                           type="tns:Chain_T113_120061_Type"
+                           minOccurs="0"
+                           meta:metaType="ChainMetaType">
+                     <annotation>
+                        <documentation>Kapcsolt jogviszony</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+      <attribute name="sdgID" use="required" fixed="120054"/>
+   </complexType>
+   <complexType name="Chain_T113_120061_Type">
+      <annotation>
+         <documentation>Kapcsolt jogviszony</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="3">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120063"
+                           type="tns:FieldGroup_T113_120063_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Kapcsolt jogviszony</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="FieldGroup_T113_120010_Type">
+      <annotation>
+         <documentation>Csoportazonosító</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoportazonosító szám (csopazon)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120012_Type">
+      <annotation>
+         <documentation>Benyújtás indoka</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C002A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Új kérelem (újkérelem)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C003A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportos áfaalanyiság tagjainak a csoporthoz való csatlakozáshoz, illetve a csoportos adóalanyisághoz adott engedély visszavonásához kapcsolatos adatai, nyilatkozatai (16potlap)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C004A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportos áfaalanyiságon kívül maradó adóalany adataihoz, nyilatkozatai (17potlap)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C005A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Képviselő személyében bekövetkezett változás (képviselőváltozás)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120013_Type">
+      <annotation>
+         <documentation>Tagok által kijelölt csoportképviselő adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C008A"
+                  minOccurs="0"
+                  type="tns:Enum_T113_0A0001C008A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Új csoportos áfa adóalany létrehozására és csoportazonosító szám megállapítását kérem/a csoportképviselő törlését kérem (UT)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C009A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportképviselő teljes neve (elnevezése) (képviselő_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C010A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (képviselő_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C011A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Közösségi adószáma (képviselő_közösségi_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C012A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoporttagok képviseletét vállalom (képviseletet_vállal)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C013A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoporttagok képviseletét a továbbiakban nem vállalom (képviseletet_nem_vállal)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120014_Type">
+      <annotation>
+         <documentation>Csoporttagok által kijelölt új csoportképviselő adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C014A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportképviselő teljes neve (elnevezése) (új_képviselő_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C015A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (új_képviselő_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C016A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoporttagok képviseletét vállalom (új_képviseletet_vállal)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C017A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportképviselő személyében bekövetkezett változás időpontja (változás_dátuma)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120015_Type">
+      <annotation>
+         <documentation>Új csoportos áfa alanyiság kérelmezése</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C018A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a csoport részére közösségi adószám megállapítását (közösségi_adószámot_kér)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C019A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a csoportos áfaalanyiság engedélyezését és a csoportazonosító szám megállapítását (csoport_azonosítót_kér)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C020A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoport létrehozásának időpontja (csoport_létrehoz_ideje)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C021A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Nyilatkozzuk, hogy nyilvántartási rendszerünk alkalmas a belső és külső kapcsolatok egyértelmű, megbízható és maradéktalan elkülönítésére. (csop_nyil_kapcs_elkülön)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C022A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kötelezettséget vállalok az Áfa tv. 8.§ (6) bekezdésében meghatározott kötelezettségek teljesítésére (Köt_váll_nyil_főlap)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C023A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az Áfatörvény 8/B. § szerinti együttes kapcsolttá válást kívánunk bejelenteni. (együtt_kapcsolttá_válás_bejel)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120016_Type">
+      <annotation>
+         <documentation>Adatlapot benyújtó ügyintéző neve és telefonszáma</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C024A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Ügyintéző neve (Ügyintéző_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="120"/>
+                  <pattern value="[^0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C025A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Telefonszáma (Ügyintéző_telefonszáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="20"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120018_Type">
+      <annotation>
+         <documentation>Csoporttag adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoporttag adatai ¦ Teljes neve (elnevezése) (csoporttag_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoporttag adatai ¦ Adószáma (csoporttag_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoporttag adatai ¦ Közösségi adószáma (csoporttag_közösségi_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120020_Type">
+      <annotation>
+         <documentation>Csoportos áfa alanyisághoz kapcsolódó nyilatkozatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC018A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a csoportos áfaalanyiság engedélyezését és a csoportazonosító szám megállapítását (közösségi_adószámot_kér_16)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC019A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a megadott csoportazonosító számú csoporthoz való csatlakozás engedélyezését (csatlakozási_engedélyt_kér_16)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC020A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoporthoz történő csatlakozás időpontja (csoporthoz_csatlakozás_ideje16)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC021A"
+                  minOccurs="0"
+                  type="tns:Enum_T113_0BXXXXC021A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a csoportos áfaalanyiságra adott engedély visszavonását (visszavonást_kér_16)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC022A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoport megszüntetésének időpontja (csoport_megszűnés_ideje)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC023A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hozzájárulok a fennmaradó áfacsoport fenntartásához (hozzájár_áfacsop_fenntart16)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC024A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A fennmaradó áfacsoport csoportazonosító száma (fennmaradó_áfacsop_csopazon16)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC025A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kötelezettséget vállalok az Áfa tv. 8.§ (7) bekezdésében meghatározott kötelezettségek teljesítésére (Köt_váll_nyil_Pótlap16)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120017_Type">
+      <annotation>
+         <documentation>Működő csoporthoz új adóalanyként csatlakozom</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC001A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Működő csoporthoz új adóalanyként csatlakozom (csatlakozik)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoportazonosító szám (csatlakozó_csopazon)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120019_Type">
+      <annotation>
+         <documentation>Kapcsolt jogviszony</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolt vállalkozás megnevezése (kapcsolt_váll_megnev16_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (kapcsolt_váll_adószáma16_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXC008A"
+                  minOccurs="0"
+                  type="tns:Enum_T113_0BXXXXC008A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolat jellege (kapcsolat_jellege16_1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC009A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolat mértéke (kapcsolat_mértéke16_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="60"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120059_Type">
+      <annotation>
+         <documentation>Kívül maradó csoporttag adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0CXXXXC007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kívül maradó adóalany adatai ¦ Teljes neve (elnevezése) (kívülmaradó_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0CXXXXC008A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kívül maradó adóalany adatai ¦ Adószáma (kívülmaradó_adószáma)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120060_Type">
+      <annotation>
+         <documentation>A kívül maradó tag nyilatkozatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0CXXXXC021A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportos áfaalanyiság létrehozásához, a csoportazonosító szám megállapításához hozzájárulok (csoportazonosítóhoz_hozzájárul)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC022A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hozzájárulok a fennmaradó áfacsoport fenntartásához (hozzájár_áfacsop_fenntart17)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC023A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A fennmaradó áfacsoport csoportazonosító száma (fennmaradó_áfacsop_csopazon17)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0CXXXXC024A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kötelezettséget vállalok az Áfa tv. 8.§ (7) bekezdésében meghatározott kötelezettségek teljesítésére (Köt_váll_nyil_Pótlap17)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120058_Type">
+      <annotation>
+         <documentation>Működő csoporthoz kívül maradó új adóalanyként kapcsolódom</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0CXXXXC001A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Működő csoporthoz kívül maradó adóalanyként kapcsolódom (kívülmarad)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Csoportazonosító szám (kívülmarad_csopazon)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0CXXXXC003A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoporthoz történő csatlakozás időpontja (csoporthoz_csatlakozás_ideje17)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC004A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a megadott csoportazonosító számú csoportból való kiválás engedélyezését (kívülmaradási_engedélyt_kér)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC005A"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>A csoportból való kiválás időpontja (csoportból_kiválás_ideje)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC006A"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kérem a megadott csoportazonosító számú csoportban kívül maradó adóalanykénti nyilvántartásom törlését (törlést_kér)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_T113_120063_Type">
+      <annotation>
+         <documentation>Kapcsolt jogviszony</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0CXXXXC009A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolt vállalkozás megnevezése (kapcsolt_váll_megnev17_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="150"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0CXXXXC010A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (kapcsolt_váll_adószáma17_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0CXXXXC011A"
+                  minOccurs="0"
+                  type="tns:Enum_T113_0BXXXXC008A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolat jellege (kapcsolat_jellege17_1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0CXXXXC012A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Kapcsolat mértéke (kapcsolat_mértéke17_1)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="60"/>
+                  <pattern value="\P{C}+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
